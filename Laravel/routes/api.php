@@ -21,3 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 // create api 
 Route::get('/get-product',[APIController::class,'getProducts']);
+Route::post('/add-product',[APIController::class,'addProduct']);
+Route::delete('/delete-product/{id}',[APIController::class,'deleteProduct']);
+Route::put('/edit-product/{id}',[APIController::class,'editProduct']);
+
+
+Route::post('/upload-image',[APIController::class,'uploadImage']);
